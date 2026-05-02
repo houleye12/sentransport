@@ -1,0 +1,18 @@
+.header {
+  background-color: #0a6e31;
+  color: white;
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.header-titre {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.header-sous-titre {
+  margin: 6px 0 0 0;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
