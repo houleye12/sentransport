@@ -5,7 +5,9 @@ import Recherche from './Recherche';
 import LigneBus from './LigneBus';
 import DetailLigne from './DetailLigne';
 import Footer from './Footer';
-
+import Carte from  './Carte';
+import Meteo from './Meteo';
+import SignalerIncident from './SignalerIncident';
 function App() {
   const [recherche, setRecherche] = useState("");
   const [ligneSelectionnee, setLigneSelectionnee] = useState(null);
@@ -75,6 +77,7 @@ if (erreur) {
     <div className="App">
       <Header />
       <main className="contenu">
+        <Meteo />        {/* <- NOUVEAU */}
         <Recherche valeur={recherche} onChange={setRecherche} />
         <p className="resultat-recherche">
           {lignesFiltrees.length} ligne{lignesFiltrees.length > 1 ? 's' : ''} trouvee{lignesFiltrees.length > 1 ? 's' : ''}
@@ -91,6 +94,8 @@ if (erreur) {
           />
         ))}
         {ligneSelectionnee && <DetailLigne ligne={ligneSelectionnee} />}
+      <Carte />         {/* <- NOUVEAU */}
+      <SignalerIncident />         {/* <- NOUVEAU */}
       </main>
       <Footer />
     </div>
